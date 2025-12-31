@@ -1,0 +1,19 @@
+# --- Excel / Office binaries (code-only repo) ---
+*.xlsm
+*.xlsx
+
+# --- Access database + lock files ---
+*.accdb
+*.laccdb
+
+# --- Office temp files ---
+~$*.*
+*.tmp
+*.bak
+
+# --- Windows noise ---
+Thumbs.db
+Desktop.ini
+
+# --- Optional: VS Code settings (keep if you use it) ---
+.vscode/

@@ -1,3 +1,26 @@
+## [1.1.0] - 2026-01-01
+
+### Added - Task 16: Production ETL with Validation & Logging
+- **modExportWithValidation.bas**: Enhanced ETL system
+  - Pre-flight data validation (ID, Product, Sales, Region)
+  - ACID-compliant transactions with automatic rollback
+  - Intelligent UPSERT (UPDATE existing + INSERT new records)
+  - Dual audit logging (Excel `ETL_Log` + Access `tbl_ETL_Log`)
+  - Portable database path resolution (no hardcoded paths)
+  - SQL injection protection with parameter escaping
+  - 10-step progress indicator
+  - Color-coded validation status in source data
+
+### Database Schema
+- **tbl_ETL_Log** table for audit trail:
+  - LogID, RunTimestamp, Operation, RecordsProcessed
+  - RecordsInserted, RecordsUpdated, RecordsFailed  
+  - Status, ErrorText, DurationSeconds
+
+---
+
+
+
 Excel–Access ETL (VBA + Power Query) — Implementation Report (Word Ready)
 
 Document Title: Excel–Access ETL Automation (VBA + Power Query + Access)

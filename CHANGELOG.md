@@ -1,3 +1,51 @@
+## [1.2.0] - 2026-01-02
+
+### Added - Task 16: Production Dashboard with Path Persistence
+
+#### Database Path Memory System
+- **Automatic path detection** with 3-tier resolution:
+  1. Same folder as workbook (instant)
+  2. Previously saved path (persistent across sessions)
+  3. User prompt (one-time, then saved)
+- **Path persistence** stored in hidden cell (ETL_Log!K1) + named range
+- **`ClearSavedDatabasePath()`** utility for manual path reset
+- **Portable design** - works when .xlsm moves between folders
+
+#### Professional Dashboard Control Center
+- **Export Button**: Full validation → UPSERT → Auto-refresh status
+- **Import Button**: Placeholder with "Feature Pending" message
+- **Refresh Button**: Updates dashboard from Access audit log
+- **Real-time status display** via 6 named ranges:
+  - Last Run Status (color-coded)
+  - Last Run Time
+  - Records Processed/Inserted/Updated
+  - Current Database Path
+
+#### Built-In Diagnostics
+- **`Dashboard_Diagnose()`** - comprehensive system health check
+- **`Dashboard_AssignMacros()`** - automatic button wiring
+- **Auto-troubleshooting** - prompts user on operation failures
+- **Visual feedback** - color-coded status cells (green/red/yellow)
+
+#### Technical Enhancements
+- **Pre-flight validation**: 20+ business rules before export
+- **ACID transactions**: Automatic rollback on errors
+- **Dual audit logging**: Excel (ETL_Log) + Access (tbl_ETL_Log)
+- **SQL injection protection**: Parameterized queries throughout
+- **Intelligent UPSERT**: Updates existing + inserts new (no duplicates)
+- **10-step progress feedback** during export operations
+
+### User Experience Improvements
+- ✅ One-click operations (no VBA editor needed)
+- ✅ Database auto-detected or prompted once only
+- ✅ Visual status indicators with detailed diagnostics
+- ✅ Comprehensive error messages with troubleshooting
+- ✅ Transaction safety with automatic rollback
+- ✅ Professional UI with color-coded feedback
+
+---
+
+
 ## [1.1.0] - 2026-01-01
 
 ### Added - Task 16: Production ETL with Validation & Logging
